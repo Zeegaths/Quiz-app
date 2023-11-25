@@ -1,6 +1,6 @@
 const questions = [
     {
-        Question: "Which is the largest animal in the world?",
+        question: "Which is the largest animal in the world?",
         answers: [
             {text: "shark", correct: false},
             {text: "Blue whale", correct: true},
@@ -9,7 +9,7 @@ const questions = [
         ]
     },
     {
-        Question: "Which is the smallest country in the world?",
+        question: "Which is the smallest country in the world?",
         answers: [
             {text: "Vatican City", correct: true},
             {text: "Bhutan", correct: true},
@@ -18,7 +18,7 @@ const questions = [
         ]
     },
     {
-        Question: "Which is the largest desert in the world?",
+        question: "Which is the largest desert in the world?",
         answers: [
             {text: "kalahari", correct: false},
             {text: "Gobi", correct: false},
@@ -27,7 +27,7 @@ const questions = [
         ] 
     },
     {
-    Question: "Which is the smallest continent in the world?",
+        question: "Which is the smallest continent in the world?",
         answers: [
             {text: "Asia", correct: false},
             {text: "Australia", correct: true},
@@ -36,9 +36,10 @@ const questions = [
         ]
     }
 ];
+
 const questionElement = document.getElementById("question");
-const answerButton = document.getElementById("answer-buttons");
-const nextButtons = document.getElementById("next-btn");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -49,6 +50,7 @@ function startQuiz(){
     nextButton.innerHTML = "Next";
     showQuestion();
 }
+
 function showQuestion(){
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -61,7 +63,7 @@ function showQuestion(){
         button.innerHTML = answer.text;
         button.classList.add("btn");
         answerButtons.appendChild(button);
-    })
+    });
 }
 
 
