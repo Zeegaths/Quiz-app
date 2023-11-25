@@ -1,0 +1,1 @@
+The quiz app highligts the answer red if it is wrong and green if it is correct. If the answer is incorrect, the correct answer is also higlighted. 
